@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="doctors_list_view" model="ir.ui.view">
+        <field name="name">hms.doctors.list</field>
+        <field name="model">hms.doctors</field>
+        <field name="arch" type="xml">
+            <list string="Doctors">
+                <field name="first_name"/>
+                <field name="last_name"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="doctors_form_view" model="ir.ui.view">
+        <field name="name">hms.doctors.form</field>
+        <field name="model">hms.doctors</field>
+        <field name="arch" type="xml">
+            <form string="Doctor">
+                <sheet>
+                    <field name="image" widget="image" class="oe_avatar"/>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="first_name" placeholder="First Name"/>
+                        </h1>
+                        <h2>
+                            <field name="last_name" placeholder="Last Name"/>
+                        </h2>
+                    </div>
+                    <notebook>
+                        <page string="Patients">
+                            <field name="patient_ids"/>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="doctors_action" model="ir.actions.act_window">
+        <field name="name">Doctors</field>
+        <field name="res_model">hms.doctors</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <menuitem id="hms_doctors_menu" name="Doctors" parent="hms_root_menu" action="doctors_action" sequence="30"/>
+</odoo>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="hms_root_menu" name="HMS" sequence="10" web_icon="hms,static/description/icon.png"/>
+    
+    <menuitem id="hms_config_menu" name="Configuration" parent="hms_root_menu" sequence="100"/>
+</odoo>
