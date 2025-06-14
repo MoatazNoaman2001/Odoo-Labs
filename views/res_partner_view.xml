@@ -1,0 +1,13 @@
+<odoo>
+    <record id="view_res_partner_form_inherit_patient" model="ir.ui.view">
+        <field name="name">res.partner.form.inherit.patient</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <!-- Target the Misc group inside the Sales & Purchase tab -->
+            <xpath expr="//page[@name='sales_purchases']//group[@name='misc']" position="inside">
+                <field name="related_patient_id"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

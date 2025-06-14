@@ -1,0 +1,24 @@
+<odoo>
+   <menuitem id="hms_root" name="HMS"/>
+<menuitem id="hms_department_menu" name="Departments" parent="hms_root"/>
+<menuitem id="hms_doctor_menu" name="Doctors" parent="hms_root"/>
+<menuitem id="hms_patient_menu" name="Patients" parent="hms_root"/>
+
+<record id="action_hms_department" model="ir.actions.act_window">
+    <field name="name">Departments</field>
+    <field name="res_model">hms.department</field>
+    <field name="view_mode">tree,form</field>
+</record>
+
+<record id="action_hms_doctor" model="ir.actions.act_window">
+    <field name="name">Doctors</field>
+    <field name="res_model">hms.doctors</field>
+    <field name="view_mode">tree,form</field>
+</record>
+
+
+<menuitem id="menu_action_department" name="Departments" parent="hms_department_menu" action="action_hms_department"/>
+<menuitem id="menu_action_doctor" name="Doctors" parent="hms_doctor_menu" action="action_hms_doctor"/>
+<menuitem id="menu_action_patient" name="Patients" parent="hms_patient_menu" action="action_hms_patient"/>
+
+</odoo>
