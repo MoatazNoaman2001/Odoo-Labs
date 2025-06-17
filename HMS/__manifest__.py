@@ -9,7 +9,7 @@
         - Departments
         - Doctors
     """,
-    "author": "mohamed abdel AaL",
+    "author": "Moataz Noaman",
     "category": "Health",
     "version": "1.0",
     "depends": ["base", "contacts"],
