@@ -9,7 +9,7 @@
         - Departments
         - Doctors
     """,
-    'author': 'Mohamed_Diab',
+    'author': 'Moataz Noaman',
     'version': '1.0',
     'depends': ['base','crm'],
     'data': [
